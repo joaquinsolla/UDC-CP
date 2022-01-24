@@ -1,0 +1,28 @@
+####### MANDEL ORIGINAL #######
+
+//Compilar
+gcc -o mandelOriginal mandelOriginal.c
+
+//Ejecutar + generar salida
+./mandel > output
+
+####### NUESTRO MANDEL #######
+
+//Compilar (con paralelismo)
+mpirun -np 2 ./mandel > output
+
+//Ejecutar + generar salida
+mpirun -np 2 ./mandel > output
+
+####### EXTRA #######
+
+//ver diferencia entre 2 archivos output
+diff outpput1 output2
+
+//ver imagen resultante
+python3 view.py output
+
+
+*****CADA PROCESO HACE Y/P FILAS*****
+*****EL ULTIMO HACE Y-(N/P)*(P-1)*****
+*****k*10 para calcular los flops*****
