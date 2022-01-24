@@ -1,0 +1,3 @@
+mpicc p5.c -lm
+
+mpirun --use-hwthread-cpus ./a.out
